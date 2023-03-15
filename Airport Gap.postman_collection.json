@@ -1,0 +1,1596 @@
+{
+	"info": {
+		"_postman_id": "3afb5a09-d286-4c67-a8aa-cb537c6268c6",
+		"name": "Airport Gap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25996442"
+	},
+	"item": [
+		{
+			"name": "GET Airports",
+			"item": [
+				{
+					"name": "GET All airports no filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All airports filter page = 0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports?page=0",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All airports filter page = 1 - Boundary value analysis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports?page=1",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All airports filter page = 203 - Boundary value analysis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports?page=203",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "203"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All airports filter page = 204 - Boundary value analysis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports?page=204",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "204"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All airports filter page = -67 - Negative testing with negative page number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports?page=-67",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "-67"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All airports filter page = 20.2 - Negative testing with decimal page number (. separator)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports?page=20.2",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "20.2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All airports filter page = 20,2 - Negative testing with decimal page number (, separator)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports?page=20,2",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "20,2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All airports filter page = 2afd34 - Negative testing with alphanumeric page param",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports?page=2afd34",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2afd34"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET Single Airport",
+			"item": [
+				{
+					"name": "GET Single Airport valid id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/KIX",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"KIX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Single Airport invalid id = 123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/123",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Single Airport incorrect id = kix",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/kix",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"kix"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST Airports distance",
+			"item": [
+				{
+					"name": "Airports distance no params",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/distance",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"distance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airports distance from = KIX, no to param",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"distance"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "KIX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airports distance no from param, to = NRT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/distance?to=NRT",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"distance"
+							],
+							"query": [
+								{
+									"key": "to",
+									"value": "NRT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airports distance from = KIX, to = NRT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX&to=NRT",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"distance"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "KIX"
+								},
+								{
+									"key": "to",
+									"value": "NRT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airports distance same value for both params",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX&to=KIX",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"distance"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "KIX"
+								},
+								{
+									"key": "to",
+									"value": "KIX"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airports distance same both params invalid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/distance?from=G58&to=V1!",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"distance"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "G58"
+								},
+								{
+									"key": "to",
+									"value": "V1!"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airports distance - Negative testing - invalid to param = 1b5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX&to=1b5",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"distance"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "KIX"
+								},
+								{
+									"key": "to",
+									"value": "1b5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airports distance - Negative testing - invalid from param = 1b5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/airports/distance?from=1b5&to=NRT",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"airports",
+								"distance"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1b5"
+								},
+								{
+									"key": "to",
+									"value": "NRT"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST Tokens",
+			"item": [
+				{
+					"name": "POST Tokens no params",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/tokens",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Tokens valid email, missing password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/tokens?email=test@airportgap.com",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@airportgap.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Tokens valid password, missing email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/tokens?password=airportgappassword",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "airportgappassword"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Tokens valid params",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/tokens?email=test@airportgap.com&password=airportgappassword",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@airportgap.com"
+								},
+								{
+									"key": "password",
+									"value": "airportgappassword"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Tokens incorrect email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/tokens?email=test@airportgap.co.uk&password=airportgappassword",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@airportgap.co.uk"
+								},
+								{
+									"key": "password",
+									"value": "airportgappassword"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Tokens incorrect password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/tokens?email=test@airportgap.com&password=test_airportgappassword",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@airportgap.com"
+								},
+								{
+									"key": "password",
+									"value": "test_airportgappassword"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET Favorites",
+			"item": [
+				{
+					"name": "GET Favorites valid token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorites invalid token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Tokenfsdgsdgsfgsf",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorites no auth token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST Favorites",
+			"item": [
+				{
+					"name": "POST Favorites not authenticated, no params",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Favorites authenticated, no params",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Favorites authenticated, valid airport id, no note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites?airport_id=HGU",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							],
+							"query": [
+								{
+									"key": "airport_id",
+									"value": "HGU"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Favorites authenticated, no airport id, with note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites?note=no airport id note",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							],
+							"query": [
+								{
+									"key": "note",
+									"value": "no airport id note"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Favorites authenticated, valid airport id, with note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites?airport_id=NRT&note=testing note param",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							],
+							"query": [
+								{
+									"key": "airport_id",
+									"value": "NRT"
+								},
+								{
+									"key": "note",
+									"value": "testing note param"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Favorite authenticated, invalid airport id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites?airport_id=123&note=note with invalid airport id",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							],
+							"query": [
+								{
+									"key": "airport_id",
+									"value": "123"
+								},
+								{
+									"key": "note",
+									"value": "note with invalid airport id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Favorites invalid uath token, valid airport id, no note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "InvalidToken",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites?airport_id=MAG",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites"
+							],
+							"query": [
+								{
+									"key": "airport_id",
+									"value": "MAG"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET Single Favorite (filter by id)",
+			"item": [
+				{
+					"name": "GET Favorite by id - not authenticated, valid id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/7975",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"7975"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorite by id - authenticated, valid id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/3158",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"3158"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorite by id - authenticated, invalid id = 7975.1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/7975.1",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"7975.1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorite by id - authenticated, invalid id = 7975,8",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/7975,8",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"7975,8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorite by id - authenticated, invalid id = abcd123",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/abcd123",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"abcd123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorite by id - authenticated, invalid id = -7974",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/-7974",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"-7974"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorite by id - authenticated, invalid id = 007975",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/007975",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"007975"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Favorite by id - not authenticated, invalid id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/1a",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"1a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PATCH Favorite (filter by id)",
+			"item": [
+				{
+					"name": "PATCH Airports notes by id - authenticated, valid id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/8256?note=My usual layover when visiting family, although it's really far away...",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"8256"
+							],
+							"query": [
+								{
+									"key": "note",
+									"value": "My usual layover when visiting family, although it's really far away..."
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Airports notes by id - unauthenticated, valid id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/8256?note=My usual layover when visiting family, although it's really far away...",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"8256"
+							],
+							"query": [
+								{
+									"key": "note",
+									"value": "My usual layover when visiting family, although it's really far away..."
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Airports notes by id - authenticated, invalid id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/25?note=My usual layover when visiting family, although it's really far away...",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"25"
+							],
+							"query": [
+								{
+									"key": "note",
+									"value": "My usual layover when visiting family, although it's really far away..."
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Airports notes by id - authenticated, missing id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/?note=My usual layover when visiting family, although it's really far away...",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "note",
+									"value": "My usual layover when visiting family, although it's really far away..."
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE All Favorites",
+			"item": [
+				{
+					"name": "DELETE All Favorites unauthenticated",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/clear_all",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"clear_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE All Favorites authenticated",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/clear_all",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"clear_all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE Single Favorite (filter by id)",
+			"item": [
+				{
+					"name": "DELETE Single Favorite by id - authenticated, valid id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/8223",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"8223"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Single Favorite by id - authenticated, invalid id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/8220",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"8220"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Single Favorite by id - unauthenticated, valid id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/8223",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								"8223"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Single Favorite by id - authenticated, missing id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://airportgap.dev-tester.com/api/favorites/",
+							"protocol": "https",
+							"host": [
+								"airportgap",
+								"dev-tester",
+								"com"
+							],
+							"path": [
+								"api",
+								"favorites",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "Token W5oe8joA6Fze2hJJcSp3fxGt",
+			"type": "string"
+		}
+	]
+}
