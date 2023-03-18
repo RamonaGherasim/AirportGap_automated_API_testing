@@ -1,0 +1,1210 @@
+{
+	"id": "435294a1-7725-4853-93b2-7001e756cfd9",
+	"name": "Airport Gap",
+	"timestamp": "2023-03-18T16:45:57.989Z",
+	"collection_id": "25996442-3afb5a09-d286-4c67-a8aa-cb537c6268c6",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-03-18T16:45:42.690Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "176bfde8-9212-4143-b402-25a53a70dacd",
+			"name": "GET All airports no filter",
+			"url": "https://airportgap.dev-tester.com/api/airports",
+			"time": 272,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				272
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8e5daa4e-2023-4aa9-90c9-0b6dc09dda9d",
+			"name": "GET All airports filter page = 0",
+			"url": "https://airportgap.dev-tester.com/api/airports?page=0",
+			"time": 167,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				167
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ab46dd87-ed7b-4f3c-9bee-f66cbb0bfa8e",
+			"name": "GET All airports filter page = 1 - Boundary value analysis",
+			"url": "https://airportgap.dev-tester.com/api/airports?page=1",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				185
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "efea64b4-40dc-42b0-8eb6-b62b338ec883",
+			"name": "GET All airports filter page = 203 - Boundary value analysis",
+			"url": "https://airportgap.dev-tester.com/api/airports?page=203",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				185
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5f942f11-b23e-48aa-825c-78fd1ab1ca5f",
+			"name": "GET All airports filter page = 204 - Boundary value analysis",
+			"url": "https://airportgap.dev-tester.com/api/airports?page=204",
+			"time": 189,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				189
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "285e1f76-5665-47d9-994c-09921863d80b",
+			"name": "GET All airports filter page = -67 - Negative testing with negative page number",
+			"url": "https://airportgap.dev-tester.com/api/airports?page=-67",
+			"time": 183,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				183
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "20e6740d-909b-48c3-972c-bd45489c7cab",
+			"name": "GET All airports filter page = 20.2 - Negative testing with decimal page number (. separator)",
+			"url": "https://airportgap.dev-tester.com/api/airports?page=20.2",
+			"time": 173,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				173
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cd84a885-ce1d-4f74-8729-7bd7968c853d",
+			"name": "GET All airports filter page = 20,2 - Negative testing with decimal page number (, separator)",
+			"url": "https://airportgap.dev-tester.com/api/airports?page=20,2",
+			"time": 179,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				179
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "81ddd5f5-efdd-49e0-a663-986e2acc4a43",
+			"name": "GET All airports filter page = 2afd34 - Negative testing with alphanumeric page param",
+			"url": "https://airportgap.dev-tester.com/api/airports?page=2afd34",
+			"time": 177,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				177
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b8067f8c-1c7f-4bc6-a701-7416e387e2a9",
+			"name": "GET Single Airport valid id",
+			"url": "https://airportgap.dev-tester.com/api/airports/KIX",
+			"time": 187,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				187
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f225cb62-34da-4639-8659-eccf177e3195",
+			"name": "GET Single Airport invalid id = 123",
+			"url": "https://airportgap.dev-tester.com/api/airports/123",
+			"time": 177,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				177
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c30adb91-4427-4551-8627-586b5622d0ce",
+			"name": "GET Single Airport incorrect id = kix",
+			"url": "https://airportgap.dev-tester.com/api/airports/kix",
+			"time": 203,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				203
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "478697d0-db4f-4c3a-bf71-1f717ca5a87b",
+			"name": "Airports distance no params",
+			"url": "https://airportgap.dev-tester.com/api/airports/distance",
+			"time": 201,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				201
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a409ce26-00be-4ad9-937b-2a12b5b7c1cf",
+			"name": "Airports distance from = KIX, no to param",
+			"url": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX",
+			"time": 175,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				175
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5b36c4da-9dae-4a62-8b55-f1c5faba7573",
+			"name": "Airports distance no from param, to = NRT",
+			"url": "https://airportgap.dev-tester.com/api/airports/distance?to=NRT",
+			"time": 196,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				196
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "620383ca-eab8-4e20-90a9-7ab27380aaea",
+			"name": "Airports distance from = KIX, to = NRT",
+			"url": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX&to=NRT",
+			"time": 174,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				174
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "271aa57c-ae0e-45fc-a8bb-fc027b17d3a9",
+			"name": "Airports distance same value for both params",
+			"url": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX&to=KIX",
+			"time": 179,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				179
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "be849d4c-3532-44ba-83b8-1c49b8713744",
+			"name": "Airports distance same both params invalid",
+			"url": "https://airportgap.dev-tester.com/api/airports/distance?from=G58&to=V1!",
+			"time": 173,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				173
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d1e7b969-7635-481e-a763-421c471ba582",
+			"name": "Airports distance - Negative testing - invalid to param = 1b5",
+			"url": "https://airportgap.dev-tester.com/api/airports/distance?from=KIX&to=1b5",
+			"time": 172,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				172
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f4d60dec-7d57-401f-837e-0a0e94d8117e",
+			"name": "Airports distance - Negative testing - invalid from param = 1b5",
+			"url": "https://airportgap.dev-tester.com/api/airports/distance?from=1b5&to=NRT",
+			"time": 173,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				173
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c056a3ab-731f-4640-916d-f21741a9d4e3",
+			"name": "POST Tokens no params",
+			"url": "https://airportgap.dev-tester.com/api/tokens",
+			"time": 180,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				180
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7db00615-0bf7-420e-980a-f71eb68c9cc4",
+			"name": "POST Tokens valid email, missing password",
+			"url": "https://airportgap.dev-tester.com/api/tokens?email=test@airportgap.com",
+			"time": 444,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				444
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "35214056-6258-49e4-ae9c-c38fd82e4648",
+			"name": "POST Tokens valid password, missing email",
+			"url": "https://airportgap.dev-tester.com/api/tokens?password=airportgappassword",
+			"time": 175,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				175
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "400dbb08-1012-4141-8983-dc51bb1756bb",
+			"name": "POST Tokens valid params",
+			"url": "https://airportgap.dev-tester.com/api/tokens?email=test@airportgap.com&password=airportgappassword",
+			"time": 434,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				434
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "367e35c8-03b1-42dd-b14a-00b11c332759",
+			"name": "POST Tokens incorrect email",
+			"url": "https://airportgap.dev-tester.com/api/tokens?email=test@airportgap.co.uk&password=airportgappassword",
+			"time": 179,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				179
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "56b91a09-66f7-4656-a807-29652039a5b7",
+			"name": "POST Tokens incorrect password",
+			"url": "https://airportgap.dev-tester.com/api/tokens?email=test@airportgap.com&password=test_airportgappassword",
+			"time": 422,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				422
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0cdb3fa0-1996-4bfd-be55-e418278a25c8",
+			"name": "GET Favorites valid token",
+			"url": "https://airportgap.dev-tester.com/api/favorites",
+			"time": 186,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				186
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5fc04837-b5c7-4d78-b4fe-8b36baea2840",
+			"name": "GET Favorites invalid token",
+			"url": "https://airportgap.dev-tester.com/api/favorites",
+			"time": 167,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				167
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a6132ef4-096f-49ef-9877-4d4915044e70",
+			"name": "GET Favorites no auth token",
+			"url": "https://airportgap.dev-tester.com/api/favorites",
+			"time": 169,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				169
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1737ddd7-4454-4189-a4da-d1d00c200516",
+			"name": "POST Favorites not authenticated, no params",
+			"url": "https://airportgap.dev-tester.com/api/favorites",
+			"time": 170,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				170
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9d5f1948-a1e7-453e-a255-a961a39a96df",
+			"name": "POST Favorites authenticated, no params",
+			"url": "https://airportgap.dev-tester.com/api/favorites",
+			"time": 178,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				178
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "31481875-10ad-453d-8e5b-d18960e53bbf",
+			"name": "POST Favorites authenticated, valid airport id, no note",
+			"url": "https://airportgap.dev-tester.com/api/favorites?airport_id=HGU",
+			"time": 191,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				191
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "db224b9d-7fc4-44ae-ab27-bdd271cdef7a",
+			"name": "POST Favorites authenticated, no airport id, with note",
+			"url": "https://airportgap.dev-tester.com/api/favorites?note=no airport id note",
+			"time": 175,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				175
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4886e801-7060-4e39-a266-94d047157fb3",
+			"name": "POST Favorites authenticated, valid airport id, with note",
+			"url": "https://airportgap.dev-tester.com/api/favorites?airport_id=NRT&note=testing note param",
+			"time": 177,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				177
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d483db92-21e4-479d-962a-3968b0b3b490",
+			"name": "POST Favorite authenticated, invalid airport id",
+			"url": "https://airportgap.dev-tester.com/api/favorites?airport_id=123&note=note with invalid airport id",
+			"time": 186,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				186
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0fb1594a-4f76-4502-9c2c-82883bd9f173",
+			"name": "POST Favorites invalid uath token, valid airport id, no note",
+			"url": "https://airportgap.dev-tester.com/api/favorites?airport_id=MAG",
+			"time": 167,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				167
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1f094424-ec12-4563-8ec2-8d3131fef9a7",
+			"name": "GET Favorite by id - not authenticated, valid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/7975",
+			"time": 171,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				171
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bf366bbe-4d5c-438c-81bb-59f2926abb81",
+			"name": "GET Favorite by id - authenticated, valid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/3158",
+			"time": 176,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				176
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3fbf8ffd-a0be-401a-bcae-3ca7e1736394",
+			"name": "GET Favorite by id - authenticated, invalid id = 7975.1",
+			"url": "https://airportgap.dev-tester.com/api/favorites/7975.1",
+			"time": 187,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				187
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3a71ebca-34ba-4409-874c-9f45e7372dc0",
+			"name": "GET Favorite by id - authenticated, invalid id = 7975,8",
+			"url": "https://airportgap.dev-tester.com/api/favorites/7975,8",
+			"time": 172,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				172
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cca53c30-cf05-48d1-9a9e-316dcc9fa24f",
+			"name": "GET Favorite by id - authenticated, invalid id = abcd123",
+			"url": "https://airportgap.dev-tester.com/api/favorites/abcd123",
+			"time": 183,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				183
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5d505720-ff9d-4fce-9e16-749d2de35a0f",
+			"name": "GET Favorite by id - authenticated, invalid id = -7974",
+			"url": "https://airportgap.dev-tester.com/api/favorites/-7974",
+			"time": 187,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				187
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4c4911cd-51c3-4673-b7aa-14dbf95b7226",
+			"name": "GET Favorite by id - authenticated, invalid id = 007975",
+			"url": "https://airportgap.dev-tester.com/api/favorites/007975",
+			"time": 184,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				184
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fa4796c4-8f0b-4eb5-9321-156b6565e740",
+			"name": "GET Favorite by id - not authenticated, invalid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/1a",
+			"time": 170,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				170
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "456fbffe-6bcf-4985-85ee-fa55de56d63f",
+			"name": "PATCH Airports notes by id - authenticated, valid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/8256?note=My usual layover when visiting family, although it's really far away...",
+			"time": 175,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				175
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "754516f8-8cf6-473a-85ab-bb38255ef389",
+			"name": "PATCH Airports notes by id - unauthenticated, valid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/8256?note=My usual layover when visiting family, although it's really far away...",
+			"time": 213,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				213
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6458cda2-eda5-4bfd-87a2-eeeb9c453fb3",
+			"name": "PATCH Airports notes by id - authenticated, invalid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/25?note=My usual layover when visiting family, although it's really far away...",
+			"time": 178,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				178
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7c6004b4-2ed1-4ef3-97e7-3d480d53791a",
+			"name": "PATCH Airports notes by id - authenticated, missing id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/?note=My usual layover when visiting family, although it's really far away...",
+			"time": 178,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				178
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0fbc6c9b-e968-4811-af38-7c46f82c8780",
+			"name": "DELETE All Favorites unauthenticated",
+			"url": "https://airportgap.dev-tester.com/api/favorites/clear_all",
+			"time": 173,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				173
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "707eca62-c033-4b52-be73-d7ff70e84fa5",
+			"name": "DELETE All Favorites authenticated",
+			"url": "https://airportgap.dev-tester.com/api/favorites/clear_all",
+			"time": 174,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				174
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "df1ccd3e-1d45-40d9-a2da-127d43d6e20d",
+			"name": "DELETE Single Favorite by id - authenticated, valid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/8223",
+			"time": 197,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				197
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "30c9f9a9-91f2-4279-91c0-4f44a495d72e",
+			"name": "DELETE Single Favorite by id - authenticated, invalid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/8220",
+			"time": 180,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				180
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "74bb6201-b555-47db-bbdb-0c261402d1f9",
+			"name": "DELETE Single Favorite by id - unauthenticated, valid id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/8223",
+			"time": 166,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				166
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c25cb8e3-405a-47bb-92b0-765c7f076562",
+			"name": "DELETE Single Favorite by id - authenticated, missing id",
+			"url": "https://airportgap.dev-tester.com/api/favorites/",
+			"time": 174,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				174
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 10558,
+	"collection": {
+		"requests": [
+			{
+				"id": "176bfde8-9212-4143-b402-25a53a70dacd",
+				"method": "GET"
+			},
+			{
+				"id": "8e5daa4e-2023-4aa9-90c9-0b6dc09dda9d",
+				"method": "GET"
+			},
+			{
+				"id": "ab46dd87-ed7b-4f3c-9bee-f66cbb0bfa8e",
+				"method": "GET"
+			},
+			{
+				"id": "efea64b4-40dc-42b0-8eb6-b62b338ec883",
+				"method": "GET"
+			},
+			{
+				"id": "5f942f11-b23e-48aa-825c-78fd1ab1ca5f",
+				"method": "GET"
+			},
+			{
+				"id": "285e1f76-5665-47d9-994c-09921863d80b",
+				"method": "GET"
+			},
+			{
+				"id": "20e6740d-909b-48c3-972c-bd45489c7cab",
+				"method": "GET"
+			},
+			{
+				"id": "cd84a885-ce1d-4f74-8729-7bd7968c853d",
+				"method": "GET"
+			},
+			{
+				"id": "81ddd5f5-efdd-49e0-a663-986e2acc4a43",
+				"method": "GET"
+			},
+			{
+				"id": "b8067f8c-1c7f-4bc6-a701-7416e387e2a9",
+				"method": "GET"
+			},
+			{
+				"id": "f225cb62-34da-4639-8659-eccf177e3195",
+				"method": "GET"
+			},
+			{
+				"id": "c30adb91-4427-4551-8627-586b5622d0ce",
+				"method": "GET"
+			},
+			{
+				"id": "478697d0-db4f-4c3a-bf71-1f717ca5a87b",
+				"method": "POST"
+			},
+			{
+				"id": "a409ce26-00be-4ad9-937b-2a12b5b7c1cf",
+				"method": "POST"
+			},
+			{
+				"id": "5b36c4da-9dae-4a62-8b55-f1c5faba7573",
+				"method": "POST"
+			},
+			{
+				"id": "620383ca-eab8-4e20-90a9-7ab27380aaea",
+				"method": "POST"
+			},
+			{
+				"id": "271aa57c-ae0e-45fc-a8bb-fc027b17d3a9",
+				"method": "POST"
+			},
+			{
+				"id": "be849d4c-3532-44ba-83b8-1c49b8713744",
+				"method": "POST"
+			},
+			{
+				"id": "d1e7b969-7635-481e-a763-421c471ba582",
+				"method": "POST"
+			},
+			{
+				"id": "f4d60dec-7d57-401f-837e-0a0e94d8117e",
+				"method": "POST"
+			},
+			{
+				"id": "c056a3ab-731f-4640-916d-f21741a9d4e3",
+				"method": "POST"
+			},
+			{
+				"id": "7db00615-0bf7-420e-980a-f71eb68c9cc4",
+				"method": "POST"
+			},
+			{
+				"id": "35214056-6258-49e4-ae9c-c38fd82e4648",
+				"method": "POST"
+			},
+			{
+				"id": "400dbb08-1012-4141-8983-dc51bb1756bb",
+				"method": "POST"
+			},
+			{
+				"id": "367e35c8-03b1-42dd-b14a-00b11c332759",
+				"method": "POST"
+			},
+			{
+				"id": "56b91a09-66f7-4656-a807-29652039a5b7",
+				"method": "POST"
+			},
+			{
+				"id": "0cdb3fa0-1996-4bfd-be55-e418278a25c8",
+				"method": "GET"
+			},
+			{
+				"id": "5fc04837-b5c7-4d78-b4fe-8b36baea2840",
+				"method": "GET"
+			},
+			{
+				"id": "a6132ef4-096f-49ef-9877-4d4915044e70",
+				"method": "GET"
+			},
+			{
+				"id": "1737ddd7-4454-4189-a4da-d1d00c200516",
+				"method": "POST"
+			},
+			{
+				"id": "9d5f1948-a1e7-453e-a255-a961a39a96df",
+				"method": "POST"
+			},
+			{
+				"id": "31481875-10ad-453d-8e5b-d18960e53bbf",
+				"method": "POST"
+			},
+			{
+				"id": "db224b9d-7fc4-44ae-ab27-bdd271cdef7a",
+				"method": "POST"
+			},
+			{
+				"id": "4886e801-7060-4e39-a266-94d047157fb3",
+				"method": "POST"
+			},
+			{
+				"id": "d483db92-21e4-479d-962a-3968b0b3b490",
+				"method": "POST"
+			},
+			{
+				"id": "0fb1594a-4f76-4502-9c2c-82883bd9f173",
+				"method": "POST"
+			},
+			{
+				"id": "1f094424-ec12-4563-8ec2-8d3131fef9a7",
+				"method": "GET"
+			},
+			{
+				"id": "bf366bbe-4d5c-438c-81bb-59f2926abb81",
+				"method": "GET"
+			},
+			{
+				"id": "3fbf8ffd-a0be-401a-bcae-3ca7e1736394",
+				"method": "GET"
+			},
+			{
+				"id": "3a71ebca-34ba-4409-874c-9f45e7372dc0",
+				"method": "GET"
+			},
+			{
+				"id": "cca53c30-cf05-48d1-9a9e-316dcc9fa24f",
+				"method": "GET"
+			},
+			{
+				"id": "5d505720-ff9d-4fce-9e16-749d2de35a0f",
+				"method": "GET"
+			},
+			{
+				"id": "4c4911cd-51c3-4673-b7aa-14dbf95b7226",
+				"method": "GET"
+			},
+			{
+				"id": "fa4796c4-8f0b-4eb5-9321-156b6565e740",
+				"method": "GET"
+			},
+			{
+				"id": "456fbffe-6bcf-4985-85ee-fa55de56d63f",
+				"method": "PATCH"
+			},
+			{
+				"id": "754516f8-8cf6-473a-85ab-bb38255ef389",
+				"method": "PATCH"
+			},
+			{
+				"id": "6458cda2-eda5-4bfd-87a2-eeeb9c453fb3",
+				"method": "PATCH"
+			},
+			{
+				"id": "7c6004b4-2ed1-4ef3-97e7-3d480d53791a",
+				"method": "PATCH"
+			},
+			{
+				"id": "0fbc6c9b-e968-4811-af38-7c46f82c8780",
+				"method": "DELETE"
+			},
+			{
+				"id": "707eca62-c033-4b52-be73-d7ff70e84fa5",
+				"method": "DELETE"
+			},
+			{
+				"id": "df1ccd3e-1d45-40d9-a2da-127d43d6e20d",
+				"method": "DELETE"
+			},
+			{
+				"id": "30c9f9a9-91f2-4279-91c0-4f44a495d72e",
+				"method": "DELETE"
+			},
+			{
+				"id": "74bb6201-b555-47db-bbdb-0c261402d1f9",
+				"method": "DELETE"
+			},
+			{
+				"id": "c25cb8e3-405a-47bb-92b0-765c7f076562",
+				"method": "DELETE"
+			}
+		]
+	}
+}
